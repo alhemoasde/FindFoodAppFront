@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Donacion } from '../models/donacion.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,6 @@ export class DonacionService {
   }
 
   listarDonacion(){
-    return this.http.get(`${this.baseUrl}/app/donaciones`,this.headers)
+    return this.http.get<Donacion[]>(`${this.baseUrl}/app/donaciones`,this.headers)
   }
 }

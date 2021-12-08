@@ -1,7 +1,7 @@
 <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Id</th>
+        <th scope="col" class="hidden-md-down">Id</th>
         <th scope="col">Fecha</th>
         <th scope="col">Donante</th>
         <th scope="col">Beneficiario</th>
@@ -9,14 +9,14 @@
         <th scope="col">Estado</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let item of donaciones">
       <tr>
-        <th scope="row" >1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.fecha}}</td>
+        <td>{{item.donante}}</td>
+        <td>{{item.beneficiario}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>{{item.estado}}</td>
       </tr>
     </tbody>
   </table>

@@ -1,6 +1,6 @@
-export interface DonacionIf {
-    donaciones: Donacion[];
-}
+// export interface DonacionIf {
+//     donaciones: Donacion[];
+// }
 
 export interface Donacion {
     id:           string;

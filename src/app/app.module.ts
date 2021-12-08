@@ -16,6 +16,7 @@ import { SeleccionarDonacionComponent } from './donacion/seleccionar/seleccionar
 import { CancelarDonacionComponent } from './donacion/cancelar/cancelar.component';
 import { ActualizarDonacionComponent } from './donacion/actualizar/actualizar.component';
 import { FinalizarDonacionComponent } from './donacion/finalizar/finalizar.component';
+import { ListarDonacionComponent } from './donacion/listar/listar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FinalizarDonacionComponent } from './donacion/finalizar/finalizar.compo
     SeleccionarDonacionComponent,
     CancelarDonacionComponent,
     ActualizarDonacionComponent,
-    FinalizarDonacionComponent
+    FinalizarDonacionComponent,
+    ListarDonacionComponent
   ],
   imports: [
     BrowserModule,

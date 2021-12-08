@@ -9,7 +9,7 @@ import { DonacionService } from 'src/app/services/donacion.service';
 })
 export class ListarDonacionComponent implements OnInit {
 
-  public donacion : Donacion[] = [];
+  public donaciones : Donacion[] = [];
 
   constructor(private donacionService : DonacionService) { }
 
@@ -18,8 +18,9 @@ export class ListarDonacionComponent implements OnInit {
   }
 
   listarDonacion(){
-    this.donacionService.listarDonacion().subscribe((donacion : any)=>{
-      console.log(donacion);
+    this.donacionService.listarDonacion().subscribe((donaciones : any)=>{
+      this.donaciones=donaciones;
+      console.log(donaciones);
     })
   }
 
