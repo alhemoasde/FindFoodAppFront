@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Inicio</a>
+      <a class="navbar-brand" routerLink="">Inicio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Administración">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Administración">
               Administración
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -19,17 +19,18 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Donación">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" placeholder="Donación">
               Donaciones
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Crear</a></li>
-              <li><a class="dropdown-item" href="#">Actualizar</a></li>
-              <li><a class="dropdown-item" href="#">Cancelar</a></li>
-              <li><a class="dropdown-item" href="#">Seleccionar</a></li>
-              <li><a class="dropdown-item" href="#">Finalizar</a></li>
+              <li><a class="dropdown-item" routerLink="crearDonacion">Crear</a></li>
+              <li><a class="dropdown-item" routerLink="actualizarDonacion">Actualizar</a></li>
+              <li><a class="dropdown-item" routerLink="cancelarDonacion">Cancelar</a></li>
+              <li><a class="dropdown-item" routerLink="eliminarDonacion">Eliminar</a></li>
+              <li><a class="dropdown-item" routerLink="seleccionarDonacion">Seleccionar</a></li>
+              <li><a class="dropdown-item" routerLink="finalizarDonacion">Finalizar</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Consultar Donaciones</a></li>
+              <li><a class="dropdown-item" routerLink="listarDonacion">Consultar Donaciones</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -44,6 +45,6 @@
     </div>
   </nav>
   <div class="container-fluid">
-     
+    <router-outlet></router-outlet>
   </div>
   
