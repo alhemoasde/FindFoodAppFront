@@ -1,1 +1,64 @@
-<p>registrar works!</p>
+<div class="card">
+    <div class="card-header">
+      <h1>Usuario</h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Creación de Usuario y Asignación de Rol</h5>
+        <form [formGroup]="UsuarioForm" (ngSubmit)="registrarUsuario()">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="nombre">Nombres y Apellidos:</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Ingrese sus nombres y apellidos.">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="correo">Email:</label>
+                        <input type="email" formControlName="correo" class="form-control" id="correo" aria-describedby="correoHelp" placeholder="ingrese su correo electronico.">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="telefono">Telefono de Contacto:</label>
+                        <input type="text" class="form-control" id="telefono" formControlName="telefono" placeholder="Ingrese su numero de contacto principal.">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="username">Asigne un usuario:</label>
+                            <input type="text" class="form-control" id="username" formControlName="username" placeholder="Cree un nombre de usuario.">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="rol">Selecciones el Rol*</label>
+                        <select id="rol" class="form-control" formControlName="rol" required>
+                            <option value="Donante" >Donante</option>
+                            <option value="Beneficiario" >Beneficiario</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" style="margin: 5px">Guardar</button>
+            <button type="reset" class="btn btn-primary" style="margin: 10px" >Limpiar</button>
+            <button type="button" class="btn btn-primary" routerLink="listarDonacion" style="margin: 5px" >Regresar</button>
+        </form>
+      
+    </div>
+  </div>
+
+
+
+

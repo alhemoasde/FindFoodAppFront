@@ -41,4 +41,8 @@ export class DonacionService {
     return this.http.post(`${this.baseUrl}/app/donacion/select`, data,this.headers);
   }
 
+  finalizarDonacion(data:Donacion){
+    return this.http.post(`${this.baseUrl}/app/donacion/finish`, data,this.headers);
+  }
+
 }
