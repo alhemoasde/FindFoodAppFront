@@ -1,12 +1,13 @@
 <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col" class="hidden-md-down">Id</th>
+        <th scope="col">Id</th>
         <th scope="col">Fecha</th>
         <th scope="col">Donante</th>
         <th scope="col">Beneficiario</th>
         <th scope="col">Descripción</th>
         <th scope="col">Estado</th>
+        <th scope="col">Opciones</th>
       </tr>
     </thead>
     <tbody *ngFor="let item of donaciones">
@@ -17,6 +18,16 @@
         <td>{{item.beneficiario}}</td>
         <td>{{item.descripcion}}</td>
         <td>{{item.estado}}</td>
+        <td>
+          <a routerLink="editarDonacion">Editar</a>
+          <br>
+          <a routerLink="cancelarDonacion">Cancelar</a>
+          <br>
+          <a routerLink="finalizarDonacion">Finalizar</a>
+          <br>
+          <a routerLink="eliminarDonacion">Eliminar</a>
+          <br>
+        </td>
       </tr>
     </tbody>
   </table>

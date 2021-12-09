@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http' // Cliente HTTP
-import { ReactiveFormsModule } from '@angular/forms'; // Formularios reactivos
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Formularios reactivos
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +37,7 @@ import { ListarDonacionComponent } from './donacion/listar/listar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule, //Para utilizar el formulario reactivo (FormGroup)
     HttpClientModule //Para utilizar el HttpClient
   ],

@@ -1,1 +1,23 @@
-<p>crear works!</p>
+<form [formGroup]="DonanteForm" (ngSubmit)="crearDonacion()">
+    <div class="form-group">
+        <label for="donantes">Seleccionar Donante*</label>
+        <select id="donante" class="form-control" formControlName="donante" required>
+            <option value="{{item.id}}" *ngFor="let item of usuarios">{{item.nombre}}</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="descripcion">Descripción de la Donación*</label>
+        <textarea class="form-control" id="descripcion" rows="3" formControlName="descripcion" placeholder="Registre claramente en que consiste su donación." required></textarea>
+    </div>
+    <br>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Confirmar donación</label>
+      </div>
+    <br>
+      <button type="submit" class="btn btn-primary" style="margin: 5px">Guardar</button>
+      <button type="reset" class="btn btn-primary" style="margin: 10px" >Limpiar</button>
+      <button type="button" class="btn btn-primary" routerLink="listarDonacion" style="margin: 5px" >Regresar</button>
+</form>
+
